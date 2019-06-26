@@ -7,8 +7,6 @@ import { Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-const cartInfo = JSON.parse(localStorage.getItem("cart"));
-
 export class Cart extends React.Component {
 	render() {
 		return (
@@ -27,7 +25,7 @@ export class Cart extends React.Component {
 								</div>
 								<div className="card-body">
 									{/* PRODUCT */}
-									{cartInfo.map((item, index) => {
+									{store.shoppingBag.map((item, index) => {
 										return (
 											<div key={index} className="row">
 												<div className="col-md-2 text-center">

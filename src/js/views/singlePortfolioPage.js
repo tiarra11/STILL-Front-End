@@ -7,7 +7,7 @@ export class SinglePortfolioPage extends React.Component {
 	render() {
 		return (
 			<Context.Consumer>
-				{({ store, action }) => {
+				{({ store, actions }) => {
 					let index = this.props.match.params.theindex;
 					console.log(index);
 					return (
@@ -32,11 +32,7 @@ export class SinglePortfolioPage extends React.Component {
 												name: store.strategy[index].name,
 												price: store.strategy[index].price
 											};
-											let temp = localStorage.getItem("cart");
-											temp = JSON.parse(temp);
-											temp = temp.concat(serviceInfo);
-											temp = JSON.stringify(temp);
-											localStorage.setItem("cart", temp);
+											actions.addToShoppingBag(serviceInfo);
 										}}>
 										Add to Cart
 									</button>

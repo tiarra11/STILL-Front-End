@@ -214,8 +214,9 @@ const getState = ({ getStore, setStore }) => {
 					.catch(error => console.error("Error: This didn't work. Try again", error));
 			},
 
-			addToShoppingBag: () => {
-				const url = process.env.HOST + "/service_catalog";
+			addToShoppingBag: item => {
+				const store = getStore();
+				setStore({ shoppingBag: store.shoppingBag.concat([item]) });
 			},
 
 			// const store = getStore();

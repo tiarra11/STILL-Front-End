@@ -15,7 +15,7 @@ export class CardStrategy extends React.Component {
 							<div className="card text-white" key={{ index }}>
 								<img
 									className="card-img-top"
-									src="https://images.unsplash.com/photo-1558810629-dcdb3f924dbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=664&q=80"
+									src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80"
 									alt="Card image cap"
 								/>
 								<div className="card-img-overlay">
