@@ -43,26 +43,26 @@ const injectContext = PassedComponent => {
 
 		componentDidMount() {
 			localStorage.setItem("cart", JSON.stringify([]));
-			// const store = localStorage.getItem("store");
-			// if (typeof store != "undefined") {
-			// 	this.setState({ store: JSON.parse(store) });
-			// 	if (store.token) this.loggedInDiDMount(store.client);
-			// }
-			// console.log("This is your store i localstorage: ", store);
-			// fetch(`${process.env.HOST}/services`, {
-			// 	method: "GET",
-			// 	headers: {
-			// 		"Content-Type": "application/json"
-			// 	}
-			// })
-			// 	.then(resp => {
-			// 		return resp.json();
-			// 	})
-			// 	.then(data => {
-			// 		console.log("Able to fetch catalog", data);
-			// 		this.state.setStore({ serviceCatalog: data });
-			// 	})
-			// 	.catch(error => console.error("Error: It didn't work. Try again", error));
+			const store = localStorage.getItem("store");
+			if (typeof store != "undefined" && token) {
+				this.setState({ store: JSON.parse(store) });
+				if (store.token) this.loggedInDiDMount(store.client);
+			}
+			console.log("This is your store i localstorage: ", store);
+			fetch(`${process.env.HOST}/services`, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json"
+				}
+			})
+				.then(resp => {
+					return resp.json();
+				})
+				.then(data => {
+					console.log("Able to fetch catalog", data);
+					this.state.setStore({ serviceCatalog: data });
+				})
+				.catch(error => console.error("Error: It didn't work. Try again", error));
 		}
 
 		render() {
