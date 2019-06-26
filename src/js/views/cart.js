@@ -16,8 +16,6 @@ export class Cart extends React.Component {
 						<div className="container">
 							<div className="card shopping-cart">
 								<div className="card-header bg-dark text-light">
-									<i className="fa fa-shopping-cart" aria-hidden="true" />
-									Shipping cart
 									<a href className="btn btn-outline-info btn-sm pull-right m-3">
 										Continue shopping
 									</a>

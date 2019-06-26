@@ -44,7 +44,7 @@ const injectContext = PassedComponent => {
 		componentDidMount() {
 			localStorage.setItem("cart", JSON.stringify([]));
 			const store = localStorage.getItem("store");
-			if (typeof store != "undefined" && token) {
+			if (typeof store != "undefined" && store) {
 				this.setState({ store: JSON.parse(store) });
 				if (store.token) this.loggedInDiDMount(store.client);
 			}
