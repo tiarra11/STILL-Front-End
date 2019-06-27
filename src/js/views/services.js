@@ -32,23 +32,27 @@ export class Services extends React.Component {
 
 							<Context.Consumer>
 								{({ store, action }) => {
-									return store.serviceCatalog.filter(s => s.type == "strategy").map((item, index) => {
-										return (
-											<Link
-												to={"/single-portfoliopage/strategy/" + index}
-												key={index}
-												style={{ textDecoration: "none" }}>
-												<div className="card col-12 my-4 servicecard2">
-													{/* This is where the onClick will be set for the selection of the package. */}
-													<div className="card-body">
-														<p className="card-text servicetext">{item.service_name} </p>
+									return store.serviceCatalog
+										.filter(s => s.service_type == "Strategy")
+										.map((item, index) => {
+											return (
+												<Link
+													to={"/single-portfoliopage/strategy/" + item.id}
+													key={index}
+													style={{ textDecoration: "none" }}>
+													<div className="card col-12 my-4 servicecard2">
+														{/* This is where the onClick will be set for the selection of the package. */}
+														<div className="card-body">
+															<p className="card-text servicetext">
+																{item.service_name}{" "}
+															</p>
 
-														<p className="card-text servicetext">$ {item.price}</p>
+															<p className="card-text servicetext">$ {item.price}</p>
+														</div>
 													</div>
-												</div>
-											</Link>
-										);
-									});
+												</Link>
+											);
+										});
 								}}
 							</Context.Consumer>
 						</div>
@@ -58,19 +62,21 @@ export class Services extends React.Component {
 							<p>Design, Logos, and Websites.</p>
 							<Context.Consumer>
 								{({ store }) => {
-									return store.serviceCatalog.filter(s => s.type == "identity").map((item, index) => {
-										return (
-											<Link to={"/single-portfoliopage/" + index} key={index}>
-												<div key={index} className="card col-12 my-4 servicecard2">
-													{/* This is where the onClick will be set for the selection of the package. */}
-													<div className="card-body">
-														<p className="card-text servicetext">{item.name}</p>
-														<p className="card-text servicetext">$ {item.price}</p>
+									return store.serviceCatalog
+										.filter(s => s.service_type == "identity")
+										.map((item, index) => {
+											return (
+												<Link to={"/single-portfoliopage/" + index} key={index}>
+													<div key={index} className="card col-12 my-4 servicecard2">
+														{/* This is where the onClick will be set for the selection of the package. */}
+														<div className="card-body">
+															<p className="card-text servicetext">{item.name}</p>
+															<p className="card-text servicetext">$ {item.price}</p>
+														</div>
 													</div>
-												</div>
-											</Link>
-										);
-									});
+												</Link>
+											);
+										});
 								}}
 							</Context.Consumer>
 						</div>
@@ -81,7 +87,7 @@ export class Services extends React.Component {
 							<Context.Consumer>
 								{({ store }) => {
 									return store.serviceCatalog
-										.filter(s => s.type == "marketing")
+										.filter(s => s.service_type == "marketing")
 										.map((item, index) => {
 											return (
 												<div key={index} className="card col-12 my-4 servicecard2">
