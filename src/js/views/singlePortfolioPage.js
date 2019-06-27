@@ -8,19 +8,21 @@ export class SinglePortfolioPage extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					let index = this.props.match.params.theindex;
-					console.log(index);
+					console.log(this);
+					const serviceId = this.props.match.params.theindex;
+					let service = store.serviceCatalog.find(s => s.id == serviceId);
+					if (typeof service == "undefined") return "service not found";
 					return (
 						<div className="container">
 							<div className="row">
 								<div className="col-md-6 m-auto">
-									<h1>{store.strategy[index].title}</h1>
+									<h1>{service.service_name}</h1>
 								</div>
 							</div>
 							<div className="row">
-								<h1>{store.strategy[index].name}</h1>
+								<h1>{service.service_name}</h1>
 
-								<div className="col-md-6 m-auto">{store.strategy[index].description}</div>
+								<div className="col-md-6 m-auto">{service.description}</div>
 							</div>
 							<div className="row">
 								<div className="col-md-6 m-auto">
@@ -29,8 +31,9 @@ export class SinglePortfolioPage extends React.Component {
 										className="btn btn-info"
 										onClick={() => {
 											const serviceInfo = {
-												name: store.strategy[index].name,
-												price: store.strategy[index].price
+												name: service.service_name,
+												id: service.id,
+												price: service.price
 											};
 											actions.addToShoppingBag(serviceInfo);
 										}}>

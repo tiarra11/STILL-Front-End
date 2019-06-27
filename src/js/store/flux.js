@@ -56,68 +56,6 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 
-			strategy: [
-				{
-					name: "Organizational Analysis",
-					description:
-						"An organizational analysis is a diagnostic business process that can help organizations understand their performance, look for problem areas, identify opportunities, and develop a plan of action for improving performance. In short, an organizational analysis is a review of the basic components of an organization.",
-					price: 2000,
-					rep: "martin"
-				},
-				{
-					name: "	Action Planning",
-					description:
-						"An action plan is a detailed plan outlining actions needed to reach one or more goals. Alternatively, businessdictionary.com defines an action plan as a sequence of steps that must be taken, or activities that must be performed well, for a strategy to succeed",
-					price: 3000,
-					rep: "joao"
-				},
-				{
-					name: "Corporate Re-Branding",
-					description:
-						"Rebranding is the process of changing the corporate image of an organisation. It is a market strategy of giving a new name, symbol, or change in design for an already-established brand. ... Rebranding is good for the business, but at the same time it may be risky. ",
-					price: 5000,
-					rep: "hernan"
-				}
-			],
-			identity: [
-				{
-					name: "logo design",
-					description: "LOGO ",
-					price: 1000
-				},
-				{
-					name: "website design",
-					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 2000
-				},
-				{
-					name: "product design",
-					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 1500
-				}
-			],
-			marketing: [
-				{
-					name: "Advertising",
-					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 2000
-				},
-				{
-					name: "Seo",
-					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 1700
-				},
-				{
-					name: "Social Media Managment",
-					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 2500
-				}
-			],
 			serviceCatalog: [],
 			shoppingBag: [],
 			client: [],
@@ -219,6 +157,22 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ shoppingBag: store.shoppingBag.concat([item]) });
 			},
 
+			getServices: () => {
+				fetch(`${process.env.HOST}/services`, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						setStore({ serviceCatalog: data });
+					})
+					.catch(error => console.error("Error: It didn't work. Try again", error));
+			},
+
 			// const store = getStore();
 			// store.shoppingBag.push(item.name,item.price);
 			// fetch( , {
@@ -232,6 +186,7 @@ const getState = ({ getStore, setStore }) => {
 			// 		});
 
 			generateOrder: cvv => {
+				const store = getStore();
 				const url = process.env.HOST + "/orders";
 				fetch(url, {
 					method: "POST",
@@ -239,7 +194,8 @@ const getState = ({ getStore, setStore }) => {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify({
-						cvv: cvv
+						cvv: cvv,
+						items: store.shoppingBag
 					})
 				});
 				// .then(resp => resp.json())

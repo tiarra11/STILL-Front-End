@@ -32,7 +32,7 @@ export class Services extends React.Component {
 
 							<Context.Consumer>
 								{({ store, action }) => {
-									return store.strategy.map((item, index) => {
+									return store.serviceCatalog.filter(s => s.type == "strategy").map((item, index) => {
 										return (
 											<Link
 												to={"/single-portfoliopage/strategy/" + index}
@@ -41,7 +41,7 @@ export class Services extends React.Component {
 												<div className="card col-12 my-4 servicecard2">
 													{/* This is where the onClick will be set for the selection of the package. */}
 													<div className="card-body">
-														<p className="card-text servicetext">{item.name} </p>
+														<p className="card-text servicetext">{item.service_name} </p>
 
 														<p className="card-text servicetext">$ {item.price}</p>
 													</div>
@@ -58,7 +58,7 @@ export class Services extends React.Component {
 							<p>Design, Logos, and Websites.</p>
 							<Context.Consumer>
 								{({ store }) => {
-									return store.identity.map((item, index) => {
+									return store.serviceCatalog.filter(s => s.type == "identity").map((item, index) => {
 										return (
 											<Link to={"/single-portfoliopage/" + index} key={index}>
 												<div key={index} className="card col-12 my-4 servicecard2">
@@ -80,17 +80,19 @@ export class Services extends React.Component {
 							<p>Put yourself out there. We Will help you do that.</p>
 							<Context.Consumer>
 								{({ store }) => {
-									return store.marketing.map((item, index) => {
-										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
-												{/* This is where the onClick will be set for the selection of the package. */}
-												<div className="card-body">
-													<p className="card-text servicetext">{item.name}</p>
-													<p className="card-text servicetext"> $ {item.price}</p>
+									return store.serviceCatalog
+										.filter(s => s.type == "marketing")
+										.map((item, index) => {
+											return (
+												<div key={index} className="card col-12 my-4 servicecard2">
+													{/* This is where the onClick will be set for the selection of the package. */}
+													<div className="card-body">
+														<p className="card-text servicetext">{item.name}</p>
+														<p className="card-text servicetext"> $ {item.price}</p>
+													</div>
 												</div>
-											</div>
-										);
-									});
+											);
+										});
 								}}
 							</Context.Consumer>
 						</div>
