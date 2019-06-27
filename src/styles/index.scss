@@ -216,8 +216,15 @@
                             }
 
 
+                        //   PORFOLIO JUMBOTRON
+                        .jumbotron {
+                            border:solid;
+    background-color: white;
+                        }
 
+                       .display-4 {
 
+                       }
 
 //********* Hey T, I have no idea what this belongs to... Do you? **********
 .aboutleft {
@@ -315,6 +322,11 @@ input[type=submit]:hover {
                                 border: 5px solid black;
                                 border-radius: 25px;
                                 background: linear-gradient(120deg, #e7e7e7 50%, #ffffff 70%);
+
+                            }
+                            .servicepackages{
+        font-family: 'Dancing Script', cursive;
+        font-size: 80px;
 
                             }
 

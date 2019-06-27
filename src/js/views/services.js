@@ -37,7 +37,7 @@ export class Services extends React.Component {
 										.map((item, index) => {
 											return (
 												<Link
-													to={"/single-portfoliopage/strategy/" + item.id}
+													to={"/single-service/" + item.id}
 													key={index}
 													style={{ textDecoration: "none" }}>
 													<div className="card col-12 my-4 servicecard2">
@@ -67,7 +67,7 @@ export class Services extends React.Component {
 										.map((item, index) => {
 											return (
 												<Link
-													to={"/single-portfoliopage/identity/" + item.id}
+													to={"/single-service/" + item.id}
 													key={index}
 													style={{ textDecoration: "none" }}>
 													<div key={index} className="card col-12 my-4 servicecard2">
@@ -94,7 +94,7 @@ export class Services extends React.Component {
 										.map((item, index) => {
 											return (
 												<Link
-													to={"/single-portfoliopage/marketing/" + item.id}
+													to={"/single-service/" + item.id}
 													key={index}
 													style={{ textDecoration: "none" }}>
 													<div key={index} className="card col-12 my-4 servicecard2">
@@ -114,6 +114,7 @@ export class Services extends React.Component {
 				</div>
 
 				<div className="container rounded-0 my-5 bg-red">
+					<h1 className="text-center p-3 servicepackages">sTill Packages</h1>
 					<div className="card-deck">
 						<div className="card bg-details1">
 							{/* This is where the onClick will be set for the selection of the package. */}
@@ -135,7 +136,7 @@ export class Services extends React.Component {
 						</div>
 						<div className="card bg-details2">
 							<div className="card-body">
-								<h5 className="card-title">Supreme Collective Package</h5>
+								<h5 className="card-title">Supreme Collective</h5>
 								<hr />
 								<p className="card-text">Our Collective Package entails the following services.</p>
 								<ul>
@@ -159,7 +160,7 @@ export class Services extends React.Component {
 						</div>
 						<div className="card bg-details3">
 							<div className="card-body">
-								<h5 className="card-title">Savage Package</h5>
+								<h5 className="card-title"> sTill Savage</h5>
 								<hr />
 								<p className="card-text">The Platinum Package includes:</p>
 								<ul>
