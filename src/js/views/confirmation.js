@@ -6,9 +6,14 @@ import { Context } from "../store/appContext";
 export class Confirmation extends React.Component {
 	render() {
 		return (
-			<div className="card mb-3 p-5">
-				<img src="" className="card-img-top" alt="..." />
-
+			<div>
+				<div className="container">
+					<img
+						src="https://images.unsplash.com/photo-1554412661-828c8d34bb9c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+						className="card-img-top"
+						alt="..."
+					/>
+				</div>
 				<div className="card-body">
 					<h5 className="card-title">Card title</h5>
 					<p className="card-text">
