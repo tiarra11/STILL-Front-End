@@ -15,14 +15,14 @@ export class Dashboard extends React.Component {
 				{({ store, actions }) => {
 					if (!store.token)
 						return (
-							<h3>
-								This is a private view my friend, go ahead and <Link to="/login">Login</Link>
+							<h3 className="justify-content-center">
+								Access Restricted. Please Login <Link to="/login">Login</Link>
 							</h3>
 						);
 					return (
 						<div className="container">
 							<div className="row">
-								<div className="col">Welcome to the dashboard</div>
+								<div className="col">Welcome to your Still Dashboard</div>
 								<header>
 									<div className="logo">
 										Xero

@@ -55,7 +55,7 @@ const getState = ({ getStore, setStore }) => {
 						We use “cookies” to collect information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service."
 				}
 			],
-
+			paolo: "",
 			serviceCatalog: [],
 			shoppingBag: [],
 			client: [],
