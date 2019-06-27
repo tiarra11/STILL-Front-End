@@ -61,16 +61,19 @@ export class Services extends React.Component {
 							<h2 className="text-center maintitle2">Identity</h2>
 							<p>Design, Logos, and Websites.</p>
 							<Context.Consumer>
-								{({ store }) => {
+								{({ store, action }) => {
 									return store.serviceCatalog
-										.filter(s => s.service_type == "identity")
+										.filter(s => s.service_type == "Identity")
 										.map((item, index) => {
 											return (
-												<Link to={"/single-portfoliopage/" + index} key={index}>
+												<Link
+													to={"/single-portfoliopage/identity/" + item.id}
+													key={index}
+													style={{ textDecoration: "none" }}>
 													<div key={index} className="card col-12 my-4 servicecard2">
 														{/* This is where the onClick will be set for the selection of the package. */}
 														<div className="card-body">
-															<p className="card-text servicetext">{item.name}</p>
+															<p className="card-text servicetext">{item.service_name}</p>
 															<p className="card-text servicetext">$ {item.price}</p>
 														</div>
 													</div>
@@ -85,18 +88,23 @@ export class Services extends React.Component {
 							<h2 className="text-center maintitle3">Marketing</h2>
 							<p>Put yourself out there. We Will help you do that.</p>
 							<Context.Consumer>
-								{({ store }) => {
+								{({ store, action }) => {
 									return store.serviceCatalog
-										.filter(s => s.service_type == "marketing")
+										.filter(s => s.service_type == "Marketing")
 										.map((item, index) => {
 											return (
-												<div key={index} className="card col-12 my-4 servicecard2">
-													{/* This is where the onClick will be set for the selection of the package. */}
-													<div className="card-body">
-														<p className="card-text servicetext">{item.name}</p>
-														<p className="card-text servicetext"> $ {item.price}</p>
+												<Link
+													to={"/single-portfoliopage/marketing/" + item.id}
+													key={index}
+													style={{ textDecoration: "none" }}>
+													<div key={index} className="card col-12 my-4 servicecard2">
+														{/* This is where the onClick will be set for the selection of the package. */}
+														<div className="card-body">
+															<p className="card-text servicetext">{item.service_name}</p>
+															<p className="card-text servicetext"> $ {item.price}</p>
+														</div>
 													</div>
-												</div>
+												</Link>
 											);
 										});
 								}}
