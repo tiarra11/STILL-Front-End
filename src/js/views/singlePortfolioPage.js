@@ -20,12 +20,13 @@ export class SinglePortfolioPage extends React.Component {
 								</div>
 							</div>
 							<div className="row">
-								<h1>{service.service_name}</h1>
+								{/* <h1>{service.service_name}</h1> */}
 
 								<div className="col-md-6 m-auto">{service.description}</div>
 							</div>
 							<div className="row">
 								<div className="col-md-6 m-auto">
+									<span>${service.price} </span>
 									<button
 										type="button"
 										className="btn btn-info"
