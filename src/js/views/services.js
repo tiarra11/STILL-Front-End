@@ -166,7 +166,7 @@ export class Services extends React.Component {
 				</div>
 				<div className="my-5 text-center">
 					<Button className="mx-3 " variant="light" size="lg">
-						<Link to="/login">Proceed to Checkout</Link>
+						<Link to="/checkout">Proceed to Checkout</Link>
 					</Button>
 				</div>
 			</div>
