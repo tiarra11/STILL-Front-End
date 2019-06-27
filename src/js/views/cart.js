@@ -71,7 +71,12 @@ export class Cart extends React.Component {
 														</div>
 													</div>
 													<div className="col-2 col-sm-2 col-md-2 text-right">
-														<button type="button" className="btn btn-outline-danger btn-xs">
+														<button
+															type="button"
+															className="btn btn-outline-danger btn-xs"
+															onClick={() => {
+																actions.deleteFromShoppingBag(index);
+															}}>
 															<i className="fa fa-trash" aria-hidden="true" />
 														</button>
 													</div>

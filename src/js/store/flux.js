@@ -218,6 +218,11 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				setStore({ shoppingBag: store.shoppingBag.concat([item]) });
 			},
+			deleteFromShoppingBag: i => {
+				const store = getStore();
+				const newBag = store.shoppingBag.filter((item, index) => i !== index);
+				setStore({ shoppingBag: newBag });
+			},
 
 			// const store = getStore();
 			// store.shoppingBag.push(item.name,item.price);
