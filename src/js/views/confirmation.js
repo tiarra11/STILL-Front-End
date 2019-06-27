@@ -6,19 +6,19 @@ import { Context } from "../store/appContext";
 export class Confirmation extends React.Component {
 	render() {
 		return (
-			<div className="App">
-				<h1>Thank You</h1>
-				<p>We will be in contact with you in the next 24hrs</p>
-				<h2>Next Steps</h2>
-				<p>
-					Since you ordered the Logo Design Package, we would recommend you gather the following information
-					before the first consultation meeting, to better expedite the process. If you would prefer to wait
-					until the meeting, that is fine, too!
-				</p>
-				<ul>
-					<li>Colors to use</li>
-					<li>Colors to avoid</li>
-				</ul>
+			<div className="card mb-3 p-5">
+				<img src="" className="card-img-top" alt="..." />
+
+				<div className="card-body">
+					<h5 className="card-title">Card title</h5>
+					<p className="card-text">
+						This is a wider card with supporting text below as a natural lead-in to additional content. This
+						content is a little bit longer.
+					</p>
+					<p className="card-text">
+						<small className="text-muted">Last updated 3 mins ago</small>
+					</p>
+				</div>
 			</div>
 		);
 	}
