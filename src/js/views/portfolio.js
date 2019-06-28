@@ -10,15 +10,13 @@ export class Portfolio extends React.Component {
 						<div className="col-4">
 							<h1 className="display-4 Portfoliohead">Corporate Re-Branding</h1>
 
-							<p className="lead" />
-							<hr className="my-4" />
-							<p>
-								It uses utility classes for typography and spacing to space content out within the
-								larger container.
+							<p className="lead">
+								{" "}
+								Skip steps to save time and/or money, but take it from the experts: cutting corners will
+								only cost you in the long run
 							</p>
-							<a className="btn btn-secondary btn-lg" href="#" role="button">
-								Learn more
-							</a>
+							<hr className="my-4" />
+							<p />
 						</div>
 						<div className="col-4">
 							<h1 />
@@ -47,18 +45,11 @@ export class Portfolio extends React.Component {
 						</div>
 						<div className="col-4">
 							<h1 className="display-4 Portfoliohead">Website Design</h1>
-							<p className="lead">
-								This is a simple hero unit, a simple jumbotron-style component for calling extra
-								attention to featured content or information.
-							</p>
+							<p className="lead" />A website cannot succeed solely through compelling design or
+							thought-provoking content. It needs to have a style that feeds into your website’s user
+							experience and functionality while being easy to understand at first glance.
 							<hr className="my-4" />
-							<p>
-								It uses utility classes for typography and spacing to space content out within the
-								larger container.
-							</p>
-							<a className="btn btn-secondary btn-lg" href="#" role="button">
-								Learn more
-							</a>
+							<p />
 						</div>
 					</div>
 				</div>
@@ -67,17 +58,11 @@ export class Portfolio extends React.Component {
 						<div className="col-4">
 							<h1 className="display-4">Social Media Managment</h1>
 							<p className="lead">
-								This is a simple hero unit, a simple jumbotron-style component for calling extra
-								attention to featured content or information.
+								Have a Strategy. Having the right social media strategy is key to the success of many
+								modern businesses.
 							</p>
 							<hr className="my-4" />
-							<p>
-								It uses utility classes for typography and spacing to space content out within the
-								larger container.
-							</p>
-							<a className="btn btn-secondary btn-lg" href="#" role="button">
-								Learn more
-							</a>
+							<p />
 						</div>
 						<div className="col-4">
 							<h1 />

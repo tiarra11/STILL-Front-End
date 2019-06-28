@@ -9,7 +9,7 @@ export class Checkout extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container bgYellow">
+						<div className="container bgYellow stillT">
 							<div className="py-5 text-center">
 								<div className="stillLogoNav navcolor">
 									<span className="sPositioningNav">s</span>
