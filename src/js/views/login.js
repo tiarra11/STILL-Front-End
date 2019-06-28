@@ -16,7 +16,7 @@ export class Login extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div>
-							<div className="text-center py-5">
+							<div className="text-center py-5 logintitle">
 								<h1>The Collective</h1>
 							</div>
 							<div className="d-flex justify-content-center">
@@ -41,7 +41,7 @@ export class Login extends React.Component {
 												}}>
 												Log In
 											</Button>
-											<p>
+											<p className="loginbottom">
 												Don’t have an account? <Link to="/register">Register now!</Link>.
 											</p>
 										</Col>

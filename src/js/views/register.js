@@ -16,7 +16,7 @@ export class Register extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div>
-							<div className="text-center py-5">
+							<div className="text-center py-5 registertop">
 								<h1>Join the Collective</h1>
 							</div>
 							<div className="d-flex justify-content-center">
@@ -51,7 +51,7 @@ export class Register extends React.Component {
 										</Col>
 									</Form.Group>
 									<Form.Group as={Row}>
-										<Col className="mt-3 text-center">
+										<Col className="mt-3 text-center registerbottom">
 											<p>
 												Already have an account? <Link to="/login">Log In</Link>.
 											</p>
