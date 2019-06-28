@@ -141,6 +141,19 @@ font-family:'Cinzel', serif;
                                 bottom: 1px;
                             }
 
+                            //singleservice//
+                            .singleservice{
+                                border-top:solid;
+                                border-bottom:solid;
+                            }
+                            .singletext1{
+                              font-family:   'Cinzel', serif;
+                              border-bottom :double;
+                            }
+                            .singletext2{
+                              font-family:   'Cinzel', serif;
+                            }
+
                     //A and Copyright Symbol
                             .footer-item2 {
                                 font-size: 16px;
@@ -402,8 +415,13 @@ input[type=submit]:hover {
 
                             .servicetext {
                                 color:white;
+                                font-family: 'Cinzel', serif;
 
                             }
+                            .servicep{
+                                font-family:'Cinzel', serif;
+                            }
+                            
 
                             .bg-details1 {
                                 background-color: rgb(109, 108, 108);

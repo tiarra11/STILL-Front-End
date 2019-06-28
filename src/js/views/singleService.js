@@ -13,16 +13,16 @@ export class SingleService extends React.Component {
 					let service = store.serviceCatalog.find(s => s.id == serviceId);
 					if (typeof service == "undefined") return "service not found";
 					return (
-						<div className="container">
+						<div className="container singleservice">
 							<div className="row">
-								<div className="col-md-6 m-auto">
+								<div className="col-md-6 m-auto singletext1">
 									<h1>{service.service_name}</h1>
 								</div>
 							</div>
 							<div className="row">
 								{/* <h1>{service.service_name}</h1> */}
 
-								<div className="col-md-6 m-auto">{service.description}</div>
+								<div className="col-md-6 m-auto singletext2">{service.description}</div>
 							</div>
 							<div className="row">
 								<div className="col-md-6 m-auto">
