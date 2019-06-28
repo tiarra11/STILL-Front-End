@@ -8,7 +8,7 @@ export class Portfolio extends React.Component {
 				<div className="jumbotron mt-5 mb-5">
 					<div className="row">
 						<div className="col-4">
-							<h1 className="display-4">Corporate Re-Branding</h1>
+							<h1 className="display-4 Portfoliohead">Corporate Re-Branding</h1>
 
 							<p className="lead" />
 							<hr className="my-4" />
@@ -46,7 +46,7 @@ export class Portfolio extends React.Component {
 							<h1 />
 						</div>
 						<div className="col-4">
-							<h1 className="display-4">Website Design</h1>
+							<h1 className="display-4 Portfoliohead">Website Design</h1>
 							<p className="lead">
 								This is a simple hero unit, a simple jumbotron-style component for calling extra
 								attention to featured content or information.
