@@ -7,7 +7,7 @@ import "../../styles/index.scss";
 export class Terms extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container bg-transparent">
 				<Context.Consumer>
 					{({ store }) => {
 						return store.termsNConditions.map((item, index) => {

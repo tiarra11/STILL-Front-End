@@ -28,11 +28,7 @@ const getState = ({ getStore, setStore }) => {
 					tcSectionBody:
 						"Your satisfaction is our #1 priority. If you are not happy with your purchase for any reason, please contact us within 30 days for a full refund."
 				},
-				{
-					header: "Shipping:",
-					tcSectionBody:
-						"Unless otherwise noted, all physical goods are shipped within 24 hours via USPS Prioirty Mail. Please refer to your purchase receipt for details."
-				},
+
 				{
 					header: "Privacy Policy:",
 					tcSectionBody:
