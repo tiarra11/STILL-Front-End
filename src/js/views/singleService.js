@@ -30,14 +30,7 @@ export class SingleService extends React.Component {
 									<button
 										type="button"
 										className="btn btn-info"
-										onClick={() => {
-											const serviceInfo = {
-												name: service.service_name,
-												id: service.id,
-												price: service.price
-											};
-											actions.addToShoppingBag(serviceInfo);
-										}}>
+										onClick={() => actions.addToShoppingBag(service)}>
 										Add to Cart
 									</button>
 								</div>

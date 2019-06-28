@@ -13,37 +13,37 @@ export class Navbar extends React.Component {
 
 		return (
 			<nav className="navbar navbar-expand-md navbar-light">
-				<div
-					className={path == "/" ? "fadein navbar-collapse collapse" : "navbar-collapse collapse"}
-					id="collapsingNavbar">
-					<ul className="navbar-nav">
-						<li className="nav-item mr-4">
-							<Link to="/" className="stillLogoNav">
-								<div>
-									<span id="still_sNav">s</span>
-									<span id="still_TNav">T</span>
-									<span id="still_illNav">ill</span>
-								</div>
-							</Link>
-						</li>
-					</ul>
-					<ul className="navbar-nav ml-auto ">
-						<li className="nav-item mr-4">
-							<Link to="/portfolio" className="navbarlink">
-								<div>
-									<span id="portfolio_porNav">Por</span>
-									<span id="portfolio_TNav">T</span>
-									<span id="portfolio_folioNav">folio</span>
-								</div>
-							</Link>
-						</li>
-						<li className="nav-item mr-4">
-							<Link to="/Services" className="navbarlink">
-								Services
-							</Link>
-						</li>
-						<Context.Consumer>
-							{({ store, actions }) => (
+				<Context.Consumer>
+					{({ store, actions }) => (
+						<div
+							className={path == "/" ? "fadein navbar-collapse collapse" : "navbar-collapse collapse"}
+							id="collapsingNavbar">
+							<ul className="navbar-nav">
+								<li className="nav-item mr-4">
+									<Link to="/" className="stillLogoNav">
+										<div>
+											<span id="still_sNav">s</span>
+											<span id="still_TNav">T</span>
+											<span id="still_illNav">ill</span>
+										</div>
+									</Link>
+								</li>
+							</ul>
+							<ul className="navbar-nav ml-auto ">
+								<li className="nav-item mr-4">
+									<Link to="/portfolio" className="navbarlink">
+										<div>
+											<span id="portfolio_porNav">Por</span>
+											<span id="portfolio_TNav">T</span>
+											<span id="portfolio_folioNav">folio</span>
+										</div>
+									</Link>
+								</li>
+								<li className="nav-item mr-4">
+									<Link to="/Services" className="navbarlink">
+										Services
+									</Link>
+								</li>
 								<li className="nav-item mr-5">
 									{!store.token ? (
 										<Link to="/login" className="navbarlink">
@@ -68,16 +68,17 @@ export class Navbar extends React.Component {
 										</span>
 									)}
 								</li>
-							)}
-						</Context.Consumer>
-						<li className="nav-item mr-4">
-							{" "}
-							<Link to="/cart">
-								<i className="fas fa-shopping-cart" style={{ color: "white" }} />
-							</Link>
-						</li>
-					</ul>
-				</div>
+								<li className="nav-item mr-4">
+									{" "}
+									<Link to="/cart">
+										<i className="fas fa-shopping-cart" style={{ color: "white" }} />
+										<span className="badge badge-light">{store.shoppingBag.length}</span>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					)}
+				</Context.Consumer>
 			</nav>
 		);
 	}

@@ -7,7 +7,7 @@ export class Checkout extends React.Component {
 	render() {
 		return (
 			<Context.Consumer>
-				{({ actions }) => {
+				{({ store, actions }) => {
 					return (
 						<div className="container bgYellow">
 							<div className="py-5 text-center">
@@ -19,41 +19,36 @@ export class Checkout extends React.Component {
 							</div>
 							<div className="row">
 								<div className="col-md-4 order-md-2 mb-4">
+									{/* Checkout Cart End */}
 									<h4 className="d-flex justify-content-between align-items-center mb-3">
 										<span className="text-muted">Your cart</span>
-										<span className="badge badge-secondary badge-pill">3</span>
-									</h4> 
+										<span className="badge badge-secondary badge-pill">
+											{store.shoppingBag.length}
+										</span>
+									</h4>
+
 									<ul className="list-group mb-3">
-										<li className="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 className="my-0">Logo Design</h6>
-											</div>
-											<span className="text-muted">$1000</span>
-										</li>
-										<li className="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 className="my-0">Website Design</h6>
-											</div>
-											<span className="text-muted">$1500</span>
-										</li>
-										<li className="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 className="my-0">Branding</h6>
-											</div>
-											<span className="text-muted">$750</span>
-										</li>
-										<li className="list-group-item d-flex justify-content-between bg-light">
-											<div className="text-success">
-												<h6 className="my-0">Promo code</h6>
-												<small>EXAMPLECODE</small>
-											</div>
-											<span className="text-success">-$5</span>
-										</li>
+										{store.shoppingBag.map((item, index) => {
+											return (
+												<li
+													key={index}
+													className="list-group-item d-flex justify-content-between lh-condensed">
+													<div>
+														<h6 className="product-name my-0">{item.service_name}</h6>
+													</div>
+													<span className="text-muted">${item.price}</span>
+												</li>
+											);
+										})}
 										<li className="list-group-item d-flex justify-content-between">
 											<span>Total (USD)</span>
-											<strong>$3250</strong>
+											<strong>
+												${store.shoppingBag.reduce((total, item) => total + item.price, 0)}
+											</strong>
 										</li>
 									</ul>
+
+									{/* Checkout Cart End */}
 									<form className="card p-2">
 										<div className="input-group">
 											<input type="text" className="form-control" />
