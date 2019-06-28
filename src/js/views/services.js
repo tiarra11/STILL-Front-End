@@ -118,12 +118,12 @@ export class Services extends React.Component {
 					<div className="card-deck">
 						<div className="card bg-details1">
 							{/* This is where the onClick will be set for the selection of the package. */}
-							<div className="card-body">
-								<h5 className="card-title">sTill Standard</h5>
+							<div className="card-body ">
+								<h5 className="card-title stillp ">sTill Standard</h5>
 								<hr />
-								<p className="card-text" />
-								This package includes:
-								<ul>
+								<p className="card-text li">This package includes:</p>
+
+								<ul className="li">
 									<li>Logo Design</li>
 									<li>Re-Branding</li>
 									<li>Website Design</li>
@@ -136,10 +136,10 @@ export class Services extends React.Component {
 						</div>
 						<div className="card bg-details2">
 							<div className="card-body">
-								<h5 className="card-title">Supreme Collective</h5>
+								<h5 className="card-title stillp ">Supreme Collective</h5>
 								<hr />
-								<p className="card-text">Our Collective Package entails the following services.</p>
-								<ul>
+								<p className="card-text li">Our Collective Package entails the following services.</p>
+								<ul className="li">
 									<li>Logo Design</li>
 									<li>Re-Branding</li>
 									<li>Website Design</li>
@@ -160,10 +160,10 @@ export class Services extends React.Component {
 						</div>
 						<div className="card bg-details3">
 							<div className="card-body">
-								<h5 className="card-title"> sTill Savage</h5>
+								<h5 className="card-title stillp"> sTill Savage</h5>
 								<hr />
-								<p className="card-text">The Platinum Package includes:</p>
-								<ul>
+								<p className="card-text li">The Platinum Package includes:</p>
+								<ul className="li">
 									<li>Logo Design</li>
 									<li>Re-Branding</li>
 									<li>Website Design</li>
