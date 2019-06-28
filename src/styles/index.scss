@@ -218,7 +218,8 @@
 
                         //   PORFOLIO JUMBOTRON
                         .jumbotron {
-                            border:solid;
+                            border-bottom:solid;
+                            border-top:solid;
     background-color: white;
                         }
 
@@ -227,6 +228,34 @@
                        }
 .card-img-top {
     border:solid;
+}
+
+.myarrow{
+  position:absolute;
+  top:0;
+  bottom:0;
+  transform: rotate(90deg);
+}
+.line {
+  border-right: 0.2rem dashed rgb(5, 1, 1);
+  display:inline-block;
+  height:5rem;
+}
+.arrow{
+position:absolute;
+  top:-0.3rem;
+  bottom:0;
+  height:1rem;
+  border-right: 0.2rem solid rgb(7, 5, 5);
+  display: inline-block;
+}
+.right{
+  left:0.3rem;
+  transform: rotate(-45deg);
+}
+.left{
+  right:0.3rem;
+  transform: rotate(45deg);
 }
 
 //********* Hey T, I have no idea what this belongs to... Do you? **********

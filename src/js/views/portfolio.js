@@ -5,7 +5,7 @@ export class Portfolio extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="jumbotron">
+				<div className="jumbotron mt-5 mb-5">
 					<div className="row">
 						<div className="col-4">
 							<h1 className="display-4">Corporate Re-Branding</h1>
@@ -23,6 +23,7 @@ export class Portfolio extends React.Component {
 						<div className="col-4">
 							<h1 />
 						</div>
+
 						<div className="col-4">
 							<img
 								className="card-img-top"
@@ -32,10 +33,14 @@ export class Portfolio extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron">
+				<div className="jumbotron mb-5">
 					<div className="row">
 						<div className="col-4">
-							<h1 />
+							<img
+								className="card-img-top"
+								src="https://www.sharplaunch.com/wp-content/uploads/2016/02/commercial-real-estate-website-design-responsive-image.png"
+								alt="Card image cap"
+							/>
 						</div>
 						<div className="col-4">
 							<h1 />
@@ -57,7 +62,7 @@ export class Portfolio extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron">
+				<div className="jumbotron mb-5">
 					<div className="row">
 						<div className="col-4">
 							<h1 className="display-4">Social Media Managment</h1>
@@ -78,7 +83,11 @@ export class Portfolio extends React.Component {
 							<h1 />
 						</div>
 						<div className="col-4">
-							<h1 />
+							<img
+								className="card-img-top"
+								src="https://www.myadminsupport.co.uk/wp-content/uploads/2012/04/My-Admin-Support-Social-Media-Management-resized.jpg"
+								alt="Card image cap"
+							/>
 						</div>
 					</div>
 				</div>
