@@ -1,3 +1,5 @@
+import { Notify } from "bc-react-notifier";
+
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
@@ -84,9 +86,13 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(token => {
-						console.log("oooooooooooooooo", loggedUser);
-						setStore({ token: token.jwt, tempLoggedUser: loggedUser });
-						history.push("/dashboard");
+						console.log("oooooooooooooooo", token);
+						if (typeof token.msg != "undefined") {
+							Notify.error(token.msg);
+						} else {
+							setStore({ token: token.jwt, tempLoggedUser: loggedUser });
+							history.push("/dashboard");
+						}
 					})
 					.then(changeStatus => {
 						fetch(`${process.env.HOST}/client/${loggedUser.client_id}`, {

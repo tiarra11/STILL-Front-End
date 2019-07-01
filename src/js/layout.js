@@ -23,7 +23,7 @@ import { Terms } from "./views/termsConditions";
 import { Checkout } from "./views/checkout";
 import { Cart } from "./views/cart";
 import { Confirmation } from "./views/confirmation";
-
+import { Notifier } from "bc-react-notifier";
 // import { Single } from "./views/single";
 
 //create your first component
@@ -38,6 +38,7 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Navbar />
+						<Notifier />
 						<Switch>
 							<Route exact path="/" component={Still} />
 
