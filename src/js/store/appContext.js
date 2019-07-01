@@ -23,23 +23,7 @@ const injectContext = PassedComponent => {
 			});
 		}
 
-		loggedInDiDMount(currentLoogedInClient) {
-			fetch(`${process.env.HOST}/client`, {
-				method: "GET",
-				headers: {
-					"Content-Type": "application/json"
-				}
-			})
-				.then(resp => {
-					return resp.json();
-				})
-				.then(data => {
-					let { store } = this.state;
-					store.client = data;
-					this.setState({ store });
-				})
-				.catch(error => console.error("Error: It didn't work. Try again", error));
-		}
+		loggedInDiDMount(currentLoogedInClient) {}
 
 		componentDidMount() {
 			const store = localStorage.getItem("store");
@@ -47,8 +31,10 @@ const injectContext = PassedComponent => {
 				this.setState({ store: JSON.parse(store) });
 				if (store.token) this.loggedInDiDMount(store.client);
 			}
+
 			console.log("This is your store in localstorage: ", store);
 			this.state.actions.getServices();
+			this.state.actions.getClients();
 		}
 
 		render() {

@@ -51,22 +51,16 @@ const getState = ({ getStore, setStore }) => {
 						We use “cookies” to collect information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service."
 				}
 			],
-			paolo: "",
 			serviceCatalog: [],
 			shoppingBag: [],
 			client: [],
 			tempLoggedUser: null,
 			token: null
-			// {
-			// 	client_id: 2,
-			// 	name: "Martin",
-			// 	email: "self.email",
-			// 	password: "self.password",
-			// 	client_login_status: false
-			// }
 		},
+
 		actions: {
 			logoutClient: id => {
+				console.log("WhataLoo");
 				setStore({ tempLoggedUser: null, token: null });
 			},
 			authenticateLogin: (email, password, history) => {
@@ -90,7 +84,7 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(token => {
-						console.log(token);
+						console.log("oooooooooooooooo", loggedUser);
 						setStore({ token: token.jwt, tempLoggedUser: loggedUser });
 						history.push("/dashboard");
 					})
@@ -120,7 +114,8 @@ const getState = ({ getStore, setStore }) => {
 								setStore({ client: data });
 							})
 							.catch(error => console.error("Error: It didn't work. Try again", error));
-					});
+					})
+					.catch(error => console.error("Error: It didn't work. Try again", error));
 				setStore({ tempLoggedUser: loggedUser });
 			},
 
@@ -170,6 +165,24 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.then(data => {
 						setStore({ serviceCatalog: data });
+					})
+					.catch(error => console.error("Error: It didn't work. Try again", error));
+			},
+
+			getClients: () => {
+				fetch(`${process.env.HOST}/client`, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						let { store } = this.state;
+						store.client = data;
+						this.setState({ store });
 					})
 					.catch(error => console.error("Error: It didn't work. Try again", error));
 			},

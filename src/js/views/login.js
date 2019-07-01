@@ -33,18 +33,13 @@ export class Login extends React.Component {
 									</Form.Group>
 									<Form.Group as={Row}>
 										<Col className="text-center">
-											{/*<Button
+											<Button
 												onClick={() => {
 													let email = document.querySelector("[type=email]").value;
 													let password = document.querySelector("[type=password]").value;
 													actions.authenticateLogin(email, password, this.props.history);
 												}}>
 												Log In
-											</Button>*/}
-											<Button>
-												<Link to="/dashboardHome" style={{ color: "white" }}>
-													Log In
-												</Link>
 											</Button>
 
 											<p className="loginbottom">
