@@ -12,6 +12,7 @@ import { SingleService } from "./views/singleService";
 import { SinglePortfolioPage } from "./views/singlePortfolioPage";
 import { Login } from "./views/login";
 import { Dashboard } from "./views/dashboard";
+import { DashboardHome } from "./views/dashboardHome";
 import { Register } from "./views/register";
 import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
 import { Scheduler } from "./views/scheduler";
@@ -69,6 +70,7 @@ export class Layout extends React.Component {
 							<Route exact path="/cart" component={Cart} />
 							<Route exact path="/confirmation" component={Confirmation} />
 							<Route exact path="/dashboard" component={Dashboard} />
+							<Route exact path="/dashboardhome" component={DashboardHome} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

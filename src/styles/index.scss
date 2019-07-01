@@ -187,7 +187,12 @@ font-family:'Cinzel', serif;
                             #still_illFooter{
                                 position: relative;
                             }
-
+//confirmation
+.App{
+    font-family: 'Josefin Sans', sans-serif;
+    border:solid;
+     max-width: 810px;
+}
 
         //LANDING (HOME/ "ABOUT") PAGE
             //Center of "About/Homepage"
@@ -391,11 +396,17 @@ input[type=submit]:hover {
 
                             }
                             .servicepackages{
-        font-family: 'Dancing Script', cursive;
+       font-family:'Josefin Sans', sans-serif;
         font-size: 80px;
 
                             }
-
+                            .stillp{
+                                font-family:'Josefin Sans', sans-serif;
+                                font-size: 30px
+                            }
+.li{
+    font-family: 'Cinzel', serif;
+}
                             .servicecard2 {
                                 background-color: rgb(155, 153, 153);
                                 padding:2px;
@@ -559,3 +570,7 @@ input[type=submit]:hover {
         border-radius: 15px;
 }
 
+.dbHover:hover {
+    background: black;
+    color: white;
+}
