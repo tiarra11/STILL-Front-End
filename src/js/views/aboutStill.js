@@ -1,13 +1,13 @@
 import React from "react";
 
 export class Still extends React.Component {
-	isItClicked = "not yet";
+	// isItClicked = "not yet";
 
-	unhide(e) {
-		document.querySelector("#collective").style.visibility = "visible";
+	// unhide(e) {
+	// 	document.querySelector("#collective").style.visibility = "visible";
 
-		e.target.style.cursor = "pointer";
-	}
+	// 	e.target.style.cursor = "pointer";
+	// }
 
 	render() {
 		return (
@@ -22,20 +22,20 @@ export class Still extends React.Component {
 					<div className="row">
 						<div className="stillLogo col-md-12 text-center mb-5">
 							<span
-								onMouseOver={this.unhide}
-								onMouseOut={() => {
-									if (this.isItClicked === "not yet") {
-										document.querySelector("#collective").style.visibility = "hidden";
-									}
-								}}
-								onClick={() => {
-									this.isItClicked = "now it is";
+							// onMouseOver={this.unhide}
+							// onMouseOut={() => {
+							// 	if (this.isItClicked === "not yet") {
+							// 		document.querySelector("#collective").style.visibility = "hidden";
+							// 	}
+							// }}
+							// onClick={() => {
+							// 	this.isItClicked = "now it is";
 
-									let arr = document.querySelectorAll(".hide");
-									for (let e of arr) {
-										e.style.visibility = "visible";
-									}
-								}}>
+							// 	let arr = document.querySelectorAll(".hide");
+							// 	for (let e of arr) {
+							// 		e.style.visibility = "visible";
+							// 	}}}
+							>
 								<span className="sPositioning">s</span>
 								<span className="stillT">T</span>
 								<span className="illpositioning">ill</span>
