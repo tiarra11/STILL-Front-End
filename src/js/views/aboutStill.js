@@ -65,8 +65,13 @@ export class Still extends React.Component {
 					<div className="row">
 						<div className="fadein col-md-12 text-center about m-auto">
 							<div className="aboutus">
-								STill &amp; Co wants to give you the sTill experience your brand needs. We have a small
-								team of creative artists that will expand your brand to a savvy company.
+								Founded in the Spring of 2017, sTill Collective is a marketplace for on-demand branding
+								and business consulting services, where clients and professionals meet. We know that
+								building your business is hard. That, coupled with finding the best help to develop your
+								brand, can be stressful, expensive, and take up a lot of time. Here at sTill we simplify
+								this process by offering the most important services you need under the pillars of
+								Strategy, Identity, and Marketing. You have direct access to a Collective of experts who
+								specialize in those fields, and work together to meet your professional needs.
 							</div>
 						</div>
 					</div>
