@@ -59,7 +59,10 @@ export class Services extends React.Component {
 
 						<div className="col-md-4">
 							<h2 className="text-center maintitle2">Identity</h2>
-							<p className="servicep">Design, Logos, and Websites.</p>
+							<p className="servicep">
+								Design, Logos, and Websites - The visuals of your business, essential for Branding so
+								that people know who you are.
+							</p>
 							<Context.Consumer>
 								{({ store, action }) => {
 									return store.serviceCatalog
@@ -86,7 +89,10 @@ export class Services extends React.Component {
 
 						<div className="col-md-4">
 							<h2 className="text-center maintitle3">Marketing</h2>
-							<p className="servicep">Put yourself out there. We Will help you do that.</p>
+							<p className="servicep">
+								A successful business is one that has its name out there. Need help spreading the word?
+								We&apos;ve got you covered.
+							</p>
 							<Context.Consumer>
 								{({ store, action }) => {
 									return store.serviceCatalog
