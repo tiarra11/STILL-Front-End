@@ -45,6 +45,7 @@
                             #portfolio_porNav{
                                 position: relative;
                                 bottom: 1px;
+                                line-height: 1.8;
                             }
                             #portfolio_TNav{
                                 font-family: 'Cinzel', serif;
@@ -105,13 +106,12 @@
 
                             // "LOGIN" //
                             .logintitle{
-font-family:'Cinzel', serif;
+                                font-family:'Cinzel', serif;
 
                             }
                             .loginbottom{
                                 font-family:'Cinzel', serif;
                             }
-
 
                             //"Register//
                             .registertop{
@@ -478,7 +478,6 @@ input[type=submit]:hover {
   }
 
 .fadein {
-    margin-top: 25px;
     font-size: 21px;
     text-align: center;
     animation: fadein 10s;
