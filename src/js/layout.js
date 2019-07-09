@@ -9,13 +9,15 @@ import { Still } from "./views/aboutStill";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { SingleService } from "./views/singleService";
-import { SinglePortfolioPage } from "./views/singlePortfolioPage";
 import { Login } from "./views/login";
 import { Dashboard } from "./views/dashboard";
 import { DashboardHome } from "./views/dashboardHome";
 import { Register } from "./views/register";
-import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
-import { Scheduler } from "./views/scheduler";
+
+// Imports of Initial Views that ended Up Not being used:
+// import { SinglePortfolioPage } from "./views/singlePortfolioPage";
+// import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
+// import { Scheduler } from "./views/scheduler";
 
 import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";
