@@ -5,6 +5,11 @@ export class Portfolio extends React.Component {
 	render() {
 		return (
 			<div>
+				<div className="portfolio_page_header text-center">
+					<span id="portfolio_Ppage">Por</span>
+					<span id="portfolio_TPpage">T</span>
+					<span id="portfolio_Ppage">folio</span>
+				</div>
 				<div className="jumbotron mt-5 mb-5">
 					<div className="row">
 						<div className="col-4">

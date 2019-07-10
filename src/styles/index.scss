@@ -2,13 +2,23 @@
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
 
-        //GENERAL STYLING (That affects every page)
+        // GENERAL STYLING (That affects every page) //
                             body{
                                 background: linear-gradient(249deg, #f3a201e0 38%, #f5a80f 70%);
                             }
 
 
-        //STILL NAVBAR STYLIZING
+        // STILL NAVBAR //
+                            .navbarlink {
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                font-size:  20px;
+                            }
+                            .navbarlink:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
+
                     //Still Homepage link (Top-Left Corner Link)
                             .stillLogoNav{
                                 color:whitesmoke;
@@ -32,16 +42,6 @@
                             }
 
                     //"Portfolio" Link
-                            .navbarlink {
-                                color:whitesmoke;
-                                font-family: 'Dancing Script', cursive;
-                                font-size:  20px;
-                            }
-                            .navbarlink:hover {
-                                color: black;
-                                text-decoration: none;
-                            }
-
                             #portfolio_porNav{
                                 position: relative;
                                 bottom: 1px;
@@ -56,15 +56,6 @@
                             }
 
                     //"Collective" Link
-                            .navbarlink {
-                                color:whitesmoke;
-                                font-family: 'Dancing Script', cursive;
-                                font-size:  20px;
-                            }
-                            .navbarlink:hover {
-                                color: black;
-                                text-decoration: none;
-                            }
                             #collective_collecNav{
                                 position: relative;
                                 bottom: 1px;
@@ -77,14 +68,12 @@
                                 bottom: 1px;
                             }
 
-        //STILL FOOTER STYLIZING
+
+        // STILL FOOTER //
                             .footer-item {
                                 font-size: 18px;
-                                // font-size: 1.4em;
                                 color:whitesmoke;
                                 font-family: 'Dancing Script', cursive;
-                                // color:black;
-                                // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
                             }
                             .footer-item:hover {
                                 color: black;
@@ -102,23 +91,6 @@
                             #contact_actFoot{
                                 position: relative;
                                 bottom: 1px;
-                            }
-
-                            // "LOGIN" //
-                            .logintitle{
-                                font-family:'Cinzel', serif;
-
-                            }
-                            .loginbottom{
-                                font-family:'Cinzel', serif;
-                            }
-
-                            //"Register//
-                            .registertop{
-                                font-family:'Cinzel', serif;
-                            }
-                            .registerbottom{
-                                font-family:'Cinzel', serif;
                             }
 
                     //"Terms & Conditions" Link
@@ -139,19 +111,6 @@
                             #conditions_ionsFoot{
                                 position: relative;
                                 bottom: 1px;
-                            }
-
-                            //singleservice//
-                            .singleservice{
-                                border-top:solid;
-                                border-bottom:solid;
-                            }
-                            .singletext1{
-                              font-family:   'Cinzel', serif;
-                              border-bottom :double;
-                            }
-                            .singletext2{
-                              font-family:   'Cinzel', serif;
                             }
 
                     //A and Copyright Symbol
@@ -187,15 +146,57 @@
                             #still_illFooter{
                                 position: relative;
                             }
-//confirmation
-.App{
-    font-family: 'Josefin Sans', sans-serif;
-    border:solid;
-     max-width: 810px;
-}
 
-        //LANDING (HOME/ "ABOUT") PAGE
+
+        // LANDING (HOME/ "ABOUT") PAGE //
+                    //Landing (Home/ "About") Page Effects
+                            .fadein {
+                                font-size: 21px;
+                                text-align: center;
+                                animation: fadein 10s;
+                                -moz-animation: fadein 5s; /* Firefox */
+                                -webkit-animation: fadein 5s; /* Safari and Chrome */
+                                -o-animation: fadein 5s; /* Opera */
+                            }
+                            
+                            @keyframes fadein {
+                                from {
+                                    opacity:0;
+                                }
+                                to {
+                                    opacity:1;
+                                }
+                            }
+                            @-moz-keyframes fadein { /* Firefox */
+                                from {
+                                    opacity:0;
+                                }
+                                to {
+                                    opacity:1;
+                                }
+                            }
+                            @-webkit-keyframes fadein { /* Safari and Chrome */
+                                from {
+                                    opacity:0;
+                                }
+                                to {
+                                    opacity:1;
+                                }
+                            }
+                            @-o-keyframes fadein { /* Opera */
+                                from {
+                                    opacity:0;
+                                }
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+
             //Center of "About/Homepage"
+                //Text Effects
+                            //.hide {
+                                //visibility: hidden;
+                            //}
 
                     //Main Big "Still" Logo
                             .stillLogo{
@@ -220,29 +221,25 @@
                                 bottom: 5px;
                             }
 
-                    //Text Effects
-                            .hide {
-                                visibility: hidden;
-                            }
-
                     //Main "Collective" text
                             #collective{
                                 font-family:'Josefin Sans', sans-serif;
                                 font-size: 42px;
                             }
-                            .about {
-                                font-size: 24px;
-                                background-color: white;
-                                border-bottom:1px solid black;
-                                padding: 38px;
-                            }
+                                //Main "Collective" shadow
+                                        .elegantshadow {
+                                            color: #131313;
+                                            letter-spacing: .1em;
+                                            text-shadow:
+                                            -16px 19px 0 #00000010,
+                                        }
 
                     //Main "S.I.M. (Strategy Identity Marketing)" text
                             .SIM {
                                 font-family: 'Josefin Sans', sans-serif;
                                 font-size:22px;
                             }
-
+            //Bottom of "About/Homepage"
                     //Main "About Us" text blurb
                             .aboutus {
                                 width: 75%;
@@ -250,52 +247,209 @@
                                 font-family: 'Josefin Sans', sans-serif;
                                 border-bottom: double;
                             }
+                            .about {
+                                font-size: 20px;
+                                background-color: white;
+                                border-bottom:1px solid black;
+                                padding: 38px;
+                            }
+                            
+        // PORTFOLIO PAGE //
+                    //"Portfolio" Header
+                            .portfolio_page_header {
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                font-size:  100px;
+                            }
+                            #portfolio_Ppage{
+                                position: relative;
+                            }
+                            #portfolio_TPpage{
+                                font-family: 'Cinzel', serif;
+                            }
+
+                    // Portfolio Jumbotrons
+                            .jumbotron {
+                                border-bottom:solid;
+                                border-top:solid;
+                                background-color: white;
+                            }
+                            .display-4{
+                                font-family:  'Josefin Sans', sans-serif;
+                            }
+                            .card-img-top {
+                                border:solid;
+                            }
+
+                            .myarrow{
+                                position:absolute;
+                                top:0;
+                                bottom:0;
+                                transform: rotate(90deg);
+                            }
+                            .line {
+                                border-right: 0.2rem dashed rgb(5, 1, 1);
+                                display:inline-block;
+                                height:5rem;
+                            }
+                            .arrow{
+                                position:absolute;
+                                top:-0.3rem;
+                                bottom:0;
+                                height:1rem;
+                                border-right: 0.2rem solid rgb(7, 5, 5);
+                                display: inline-block;
+                            }
+                            .right{
+                                left:0.3rem;
+                                transform: rotate(-45deg);
+                            }
+                            .left{
+                                right:0.3rem;
+                                transform: rotate(45deg);
+                            }
 
 
-                        //   PORFOLIO JUMBOTRON
-                        .jumbotron {
-                            border-bottom:solid;
-                            border-top:solid;
-    background-color: white;
-                        }
-                        .display-4{
-                            font-family:  'Josefin Sans', sans-serif;
-                        }
+        // "SERVICES" PAGE //
+                            #servicesSectionBlurb {
+                                text-align: left;
+                                font-weight: 500;
+                            }
+                            .shadowdiv{
+                               box-shadow: -15px 15px;
+                               background-color: black;
 
-                       .display-4 {
+                            }
+                            .bg-red {
+                                background-color:rgb(255, 255, 255);
+                                border: 5px solid black;
+                                border-radius: 25px;
+                                background: linear-gradient(120deg, #e7e7e7 50%, #ffffff 70%);
 
-                       }
-.card-img-top {
-    border:solid;
+                            }
+                            .servicepackages{
+                                font-family:'Josefin Sans', sans-serif;
+                                font-size: 80px;
+                            }
+                            .stillp{
+                                font-family:'Josefin Sans', sans-serif;
+                                font-size: 30px
+                            }
+                            .li{
+                                font-family: 'Cinzel', serif;
+                            }
+                            .servicecard2 {
+                                background-color: rgb(155, 153, 153);
+                                padding:2px;
+                            }
+                            .servicecard2:hover {
+                                border: 2px solid rgb(17, 17, 17);
+                                padding: 1px;
+                                background-color: rgb(185, 185, 185);
+                                background-color: rgb(68,68,68); /* For IEs */
+                                -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+                                -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+                                box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+                    /* This protects the inner element from being blurred */
+                                filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+                                -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+                                zoom: 1;
+                                position: relative; 
+                            }
+                            .servicetext {
+                                color:white;
+                                font-family: 'Cinzel', serif;
+
+                            }
+                            .servicep{
+                                font-family:'Josefin Sans', sans-serif;
+                            }
+                            .bg-details1 {
+                                background-color: rgb(109, 108, 108);
+                                color: white;
+                            }
+                            .bg-details2 {
+                                background-color:rgb(155, 153, 153);
+                                color: white;
+                            }
+                            .bg-details3 {
+                                background-color: rgb(204, 201, 201);
+                                color: white;
+                            }
+                            hr-white {
+                                color: white;
+                                border:10px;
+                            }
+
+                    //Service Headers
+                            .maintitle1 {
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
+                            .maintitle2 {
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
+                            .maintitle3 {
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
+        
+                    //singleservice//
+                            .singleservice{
+                                border-top:solid;
+                                border-bottom:solid;
+                            }
+                            .singletext1{
+                                font-family:   'Cinzel', serif;
+                                border-bottom :double;
+                            }
+                            .singletext2{
+                                font-family:   'Cinzel', serif;
+                            }
+
+
+        // "LOGIN" PAGE //
+                            .logintitle{
+                                font-family:'Cinzel', serif;
+
+                            }
+                            .loginbottom{
+                                font-family:'Cinzel', serif;
+                            }
+
+
+        //"REGISTER" PAGE //
+                            .registertop{
+                                font-family:'Cinzel', serif;
+                            }
+                            .registerbottom{
+                                font-family:'Cinzel', serif;
+                            }
+
+
+        // CONFIRMATION PAGE //
+                            .App{
+                                font-family: 'Josefin Sans', sans-serif;
+                                border:solid;
+                                max-width: 810px;
+                            }
+
+
+
+.card-click {
+    cursor:pointer;
 }
 
-.myarrow{
-  position:absolute;
-  top:0;
-  bottom:0;
-  transform: rotate(90deg);
+.dark-transparent {
+    background-color: #6e6e6e9a;
+    width: 100%;
+    padding: 15px;
+        border-radius: 15px;
 }
-.line {
-  border-right: 0.2rem dashed rgb(5, 1, 1);
-  display:inline-block;
-  height:5rem;
+
+.dbHover:hover {
+    background: black;
+    color: white;
 }
-.arrow{
-position:absolute;
-  top:-0.3rem;
-  bottom:0;
-  height:1rem;
-  border-right: 0.2rem solid rgb(7, 5, 5);
-  display: inline-block;
-}
-.right{
-  left:0.3rem;
-  transform: rotate(-45deg);
-}
-.left{
-  right:0.3rem;
-  transform: rotate(45deg);
-}
+
 
 //********* Hey T, I have no idea what this belongs to... Do you? **********
 .aboutleft {
@@ -375,152 +529,6 @@ input[type=submit]:hover {
 
 
 
-
-        //SERVICES
-                            #servicesSectionBlurb {
-                                text-align: left;
-                                font-weight: 500;
-                            }
-
-                            .shadowdiv{
-                               box-shadow: -15px 15px;
-                               background-color: black;
-
-                            }
-
-                            .bg-red {
-                                background-color:rgb(255, 255, 255);
-                                border: 5px solid black;
-                                border-radius: 25px;
-                                background: linear-gradient(120deg, #e7e7e7 50%, #ffffff 70%);
-
-                            }
-                            .servicepackages{
-       font-family:'Josefin Sans', sans-serif;
-        font-size: 80px;
-
-                            }
-                            .stillp{
-                                font-family:'Josefin Sans', sans-serif;
-                                font-size: 30px
-                            }
-.li{
-    font-family: 'Cinzel', serif;
-}
-                            .servicecard2 {
-                                background-color: rgb(155, 153, 153);
-                                padding:2px;
-                            }
-
-                            .servicecard2:hover {
-                            border: 2px solid rgb(17, 17, 17);
-                            padding: 1px;
-                            background-color: rgb(185, 185, 185);
-	                        background-color: rgb(68,68,68); /* For IEs */
-                            -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
-                            -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
-                            box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
-
-	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
-	zoom: 1;
-    	position: relative; /* This protects the inner element from being blurred */
-                            }
-
-                            .servicetext {
-                                color:white;
-                                font-family: 'Cinzel', serif;
-
-                            }
-                            .servicep{
-                                font-family:'Josefin Sans', sans-serif;
-                            }
-
-
-                            .bg-details1 {
-                                background-color: rgb(109, 108, 108);
-                                color: white;
-
-                            }
-                            .bg-details2 {
-                                background-color:rgb(155, 153, 153);
-                                color: white;
-
-                            }
-                            .bg-details3 {
-                                background-color: rgb(204, 201, 201);
-                                color: white;
-                            }
-
-                            hr-white {
-                                color: white;
-                                border:10px;
-                            }
-                    // Service Headers
-                            .maintitle1 {
-                                font-family: 'Josefin Sans', sans-serif;
-                            }
-                            .maintitle2 {
-                                font-family: 'Josefin Sans', sans-serif;
-                            }
-                            .maintitle3 {
-                                font-family: 'Josefin Sans', sans-serif;
-                            }
-
-
-//shadow
-
-.elegantshadow {
-    color: #131313;
-    letter-spacing: .1em;
-    text-shadow:
-      -16px 19px 0 #00000010,
-  }
-
-.fadein {
-    font-size: 21px;
-    text-align: center;
-    animation: fadein 10s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
-    -o-animation: fadein 5s; /* Opera */
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-
 //**********************************************************************************************
 //**********************************************************************************************
 //Unused Navbar Styling (This styling code was messing stuff up, or not giving the desired look)
@@ -558,18 +566,3 @@ input[type=submit]:hover {
         // //     font-size:  30px;
         // //     color:white;
         // }
-.card-click {
-    cursor:pointer;
-}
-
-.dark-transparent {
-    background-color: #6e6e6e9a;
-    width: 100%;
-    padding: 15px;
-        border-radius: 15px;
-}
-
-.dbHover:hover {
-    background: black;
-    color: white;
-}
