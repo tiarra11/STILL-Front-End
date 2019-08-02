@@ -13,4 +13,12 @@ https://ProspersMartin.github.io/StillCo_Final_Project_Frontend/
 
 ### Concept
 
-  To get a more thorough understanding, and eventual development, of the Still Collective business and web application  structure, I wireframed the entire application. The following wireframe designs were meant to serve as a foundation for the design of the application, a preliminary layout.
+  To get a more thorough understanding, and eventual development, of the Still Collective business and web application  structure, I wireframed the entire application. The following wireframe designs were meant to serve as a foundation for the design of the application, a preliminary layout...
+  
+  ![](./img/IMG_5670.jpg)
+  
+  ![](./img/IMG_5667.jpg)
+  
+  ![](./img/IMG_5668.jpg)
+  
+  ![](./img/IMG_5669.jpg)
