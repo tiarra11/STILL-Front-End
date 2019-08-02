@@ -9,4 +9,8 @@ https://ProspersMartin.github.io/StillCo_Final_Project_Frontend/
 ## Build
   React.js, CSS, Bootstrap, Font Awesome, and Google Fonts and Google Fonts were used for this application's development. It is also fully integrated with its Back End counterpart.
   
-### Layout
+## Layout
+
+### Concept
+
+  To get a more thorough understanding, and eventual development, of the Still Collective business and web application  structure, I wireframed the entire application. The following wireframe designs were meant to serve as a foundation for the design of the application, a preliminary layout.
