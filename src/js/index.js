@@ -10,6 +10,7 @@ import "../styles/index.scss";
 
 //include your index.scss file into the bundle
 // import "../styles/dashboard.scss";
+console.log("Hello 1.0");
 
 //import your own components
 import Layout from "./layout";

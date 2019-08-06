@@ -55,17 +55,19 @@ export class Navbar extends React.Component {
 											</div>
 										</Link>
 									) : (
-										<span
-											className="navbarlink"
-											onClick={() => {
-												actions.logoutClient(
-													store.tempLoggedUser.client_id,
-													this.props.history
-												);
-											}}
-											id="collective_logoutNav">
-											Logout
-										</span>
+										<Link to="/login" className="navbarlink">
+											<span
+												className="navbarlink"
+												onClick={() => {
+													actions.logoutClient(
+														store.tempLoggedUser.client_id,
+														this.props.history
+													);
+												}}
+												id="collective_logoutNav">
+												Logout
+											</span>
+										</Link>
 									)}
 								</li>
 								<li className="nav-item mr-4">

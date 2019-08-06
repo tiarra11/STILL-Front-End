@@ -186,9 +186,7 @@ const getState = ({ getStore, setStore }) => {
 						return resp.json();
 					})
 					.then(data => {
-						let { store } = this.state;
-						store.client = data;
-						this.setState({ store });
+						setStore({ client: data });
 					})
 					.catch(error => console.error("Error: It didn't work. Try again", error));
 			},
